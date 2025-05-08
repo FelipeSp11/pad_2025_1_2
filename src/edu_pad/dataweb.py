@@ -38,16 +38,17 @@ class DataWeb:
                 'Volume': 'volume'
             })
             df = self.convertir_numericos(df)
-            df.to_excel("dataweb_limpios.xlsx", index=False)
+            print("Datos Obtenidos ")
+            #df.to_excel("dataweb_limpios.xlsx")
             
             #print(nombre_columnas)
             #print(filas)
 
 
-            
+            return df
         except Exception as err:
             print(f"Error al obtener los datos")               
-
+            df = pd.DataFrame()
 
 
 
@@ -55,11 +56,9 @@ class DataWeb:
         df=df.copy()
         if len(df)>0:
            for col in('date','open','high','low','close','adj_close','volume'):
-               df[col]=(
-                   df[col].str.replace(',','')
-                   .str.replace('$','') 
+               df[col]=(df[col].str.replace(',','').str.replace('$','')) 
                    
-               )
+               
         return df
 
                   
