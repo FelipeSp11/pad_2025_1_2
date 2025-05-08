@@ -32,7 +32,7 @@ jobs:
       - name: Paso 8 - Guardar el commit con el ultimo cambio desde pipeline
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: Genera archivo csv de las web
+          commit_message: Genera archivo csv de la web
           commit_user_name: Felipe Sánchez [GitHub Actions]
           commit_user_email: leon.sanchez@est.iudigital.edu.co
           commit_author: Felipe Sánchez <leon.sanchez@est.iudigital.edu.co>
