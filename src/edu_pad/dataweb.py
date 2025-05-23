@@ -38,7 +38,10 @@ class DataWeb:
                 'Volume': 'volume'
             })
             df = self.convertir_numericos(df)
+            print("*********************************************")
             print("Datos Obtenidos ")
+            print("*********************************************")
+            print(df.head())
             #df.to_excel("dataweb_limpios.xlsx")
             
             #print(nombre_columnas)
