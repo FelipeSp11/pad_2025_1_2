@@ -5,7 +5,7 @@ def main():
     dw = DataWeb()
     df = dw.obtener_datos()
     df = dw.convertir_numericos(df)
-    df.to_csv("src/edu_pad/static/csv/data_webdb.csv", index=False)
+    df.to_csv("pad_2025_1_2/src/edu_pad/static/csv/data_webdb.csv", index=False)
 
 if __name__ == "__main__":
     main()
