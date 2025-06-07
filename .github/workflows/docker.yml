@@ -20,11 +20,7 @@ jobs:
         run: docker build -t contenedor .
       - name: Paso 4 - Ejecutar extractor
         run: 
-          docker run --rm \
-            -v "${{ github.workspace }}/static/csv":/pad_2025_1_2/static/csv \
-            -v "${{ github.workspace }}/static/db":/pad_2025_1_2/static/db \
-            contenedor python -m edu_pad.main_extractor
-
+          docker run -w /home/runner/work/pad_2025_1_2/pad_2025_1_2 -v /home/runner/work/pad_2025_1_2/pad_2025_1_2/static/csv:/pad_2025_1_2/static/csv -v /home/runner/work/pad_2025_1_2/pad_2025_1_2/static/db:/pad_2025_1_2/static/db contenedor python -m edu_gad.main_extractor
       - name: Paso 5 - Ejecutar ingesta
         run: 
           docker run --rm \
