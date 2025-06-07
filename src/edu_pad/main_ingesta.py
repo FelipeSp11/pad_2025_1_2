@@ -4,7 +4,7 @@ import pandas as pd
 
 def main():
     database= DataBase()
-    df= pd.read_csv("src/edu_pad/static/csv/data_webdb.csv", index=False)
+    df= pd.read_csv("src/edu_pad/static/csv/data_webdb.csv")
     df_db = database.guardar_df(df)
    
     
